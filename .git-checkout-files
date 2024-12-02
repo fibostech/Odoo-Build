@@ -1,0 +1,17 @@
+.vuepress
+build
+scripts
+snippets
+templates
+.dockerignore
+.env.template
+.git-checkout-files
+.git-reset-files
+.gitignore
+docker-compose.yml
+package.json
+package-lock.json
+README.md
+requirements.txt
+task
+task.md

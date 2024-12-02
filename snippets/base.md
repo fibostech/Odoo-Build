@@ -203,6 +203,54 @@ ID: `mint_system.base.res_partner_kanban_view.show_website`
 ```
 Source: [snippets/base.res_partner_kanban_view.show_website.xml](https://github.com/Mint-System/Odoo-Build/tree/16.0/snippets/base.res_partner_kanban_view.show_website.xml)
 
+### X Eori  
+ID: `mint_system.base.res_partner_kanban_view.x_eori`  
+```xml
+<?xml version="1.0"?>
+<data inherit_id="base.res_partner_kanban_view" priority="50">
+    <xpath expr="//t[@t-name='kanban-box']//field[@name='display_name']/.." position="after">
+        <br/><field name="x_eori"/>
+    </xpath>
+</data>
+```
+Source: [snippets/base.res_partner_kanban_view.x_eori.xml](https://github.com/Mint-System/Odoo-Build/tree/16.0/snippets/base.res_partner_kanban_view.x_eori.xml)
+
+### X Schema  
+ID: `mint_system.base.res_partner_kanban_view.x_schema`  
+```xml
+<?xml version="1.0"?>
+<data inherit_id="base.res_partner_kanban_view" priority="50">
+    <xpath expr="//t[@t-name='kanban-box']//field[@name='display_name']" position="before">
+        <field name="x_schema" widget="badge"/><br/>
+    </xpath>
+</data>
+```
+Source: [snippets/base.res_partner_kanban_view.x_schema.xml](https://github.com/Mint-System/Odoo-Build/tree/16.0/snippets/base.res_partner_kanban_view.x_schema.xml)
+
+### X Vat  
+ID: `mint_system.base.res_partner_kanban_view.x_vat`  
+```xml
+<?xml version="1.0"?>
+<data inherit_id="base.res_partner_kanban_view" priority="50">
+    <xpath expr="//t[@t-name='kanban-box']//field[@name='display_name']/.." position="after">
+        <br/><field name="x_vat"/>
+    </xpath>
+</data>
+```
+Source: [snippets/base.res_partner_kanban_view.x_vat.xml](https://github.com/Mint-System/Odoo-Build/tree/16.0/snippets/base.res_partner_kanban_view.x_vat.xml)
+
+### X Zaz  
+ID: `mint_system.base.res_partner_kanban_view.x_zaz`  
+```xml
+<?xml version="1.0"?>
+<data inherit_id="base.res_partner_kanban_view" priority="50">
+    <xpath expr="//t[@t-name='kanban-box']//field[@name='display_name']/.." position="after">
+        <br/><field name="x_zaz"/>
+    </xpath>
+</data>
+```
+Source: [snippets/base.res_partner_kanban_view.x_zaz.xml](https://github.com/Mint-System/Odoo-Build/tree/16.0/snippets/base.res_partner_kanban_view.x_zaz.xml)
+
 ## User Groups View  
 ### Remove Fleet Groups  
 ID: `mint_system.base.user_groups_view.remove_fleet_groups`  
@@ -674,6 +722,32 @@ ID: `mint_system.base.view_partner_form.x_privacy_visibility`
 ```
 Source: [snippets/base.view_partner_form.x_privacy_visibility.xml](https://github.com/Mint-System/Odoo-Build/tree/16.0/snippets/base.view_partner_form.x_privacy_visibility.xml)
 
+### X Schema  
+ID: `mint_system.base.view_partner_form.x_schema`  
+```xml
+<?xml version="1.0"?>
+<data inherit_id="base.view_partner_form" priority="50">
+    <xpath expr="//field[@name='category_id']" position="after">
+        <field name="x_schema"/>
+    </xpath>
+</data>
+
+```
+Source: [snippets/base.view_partner_form.x_schema.xml](https://github.com/Mint-System/Odoo-Build/tree/16.0/snippets/base.view_partner_form.x_schema.xml)
+
+### X Vat  
+ID: `mint_system.base.view_partner_form.x_vat`  
+```xml
+<?xml version="1.0"?>
+<data inherit_id="base.view_partner_form" priority="50">
+    <xpath expr="//field[@name='vat']" position="after">
+        <field name="x_vat"/>
+    </xpath>
+</data>
+
+```
+Source: [snippets/base.view_partner_form.x_vat.xml](https://github.com/Mint-System/Odoo-Build/tree/16.0/snippets/base.view_partner_form.x_vat.xml)
+
 ### X Vst  
 ID: `mint_system.base.view_partner_form.x_vst`  
 ```xml
@@ -692,6 +766,19 @@ ID: `mint_system.base.view_partner_form.x_vst`
 
 ```
 Source: [snippets/base.view_partner_form.x_vst.xml](https://github.com/Mint-System/Odoo-Build/tree/16.0/snippets/base.view_partner_form.x_vst.xml)
+
+### X Zaz  
+ID: `mint_system.base.view_partner_form.x_zaz`  
+```xml
+<?xml version="1.0"?>
+<data inherit_id="base.view_partner_form" priority="50">
+    <xpath expr="//field[@name='vat']" position="after">
+        <field name="x_zaz"/>
+    </xpath>
+</data>
+
+```
+Source: [snippets/base.view_partner_form.x_zaz.xml](https://github.com/Mint-System/Odoo-Build/tree/16.0/snippets/base.view_partner_form.x_zaz.xml)
 
 ## View Partner Tree  
 ### Add Ref Zip Type  
@@ -883,6 +970,19 @@ ID: `mint_system.base.view_partner_tree.show_type`
 ```
 Source: [snippets/base.view_partner_tree.show_type.xml](https://github.com/Mint-System/Odoo-Build/tree/16.0/snippets/base.view_partner_tree.show_type.xml)
 
+### Show X Schema  
+ID: `mint_system.base.view_partner_tree.show_x_schema`  
+```xml
+<?xml version="1.0"?>
+<data inherit_id="base.view_partner_tree" priority="50">
+    <field name="display_name" position="after">
+        <field name="x_schema" optional="show"/>
+    </field>
+</data>
+
+```
+Source: [snippets/base.view_partner_tree.show_x_schema.xml](https://github.com/Mint-System/Odoo-Build/tree/16.0/snippets/base.view_partner_tree.show_x_schema.xml)
+
 ### X Bexioid  
 ID: `mint_system.base.view_partner_tree.x_bexioid`  
 ```xml
@@ -899,16 +999,11 @@ Source: [snippets/base.view_partner_tree.x_bexioid.xml](https://github.com/Mint-
 ### X Eori  
 ID: `mint_system.base.view_partner_tree.x_eori`  
 ```xml
+<?xml version="1.0"?>
 <data inherit_id="base.view_partner_tree" priority="50">
-
-    <xpath expr="//field[@name='vat']" position="after">
+    <field name="display_name" position="after">
         <field name="x_eori"/>
-    </xpath>
-
-    <xpath expr="//notebook//form/sheet/group/group/field[@name='company_id']" position="after">
-        <field name="x_eori"/>
-    </xpath>
-
+    </field>
 </data>
 ```
 Source: [snippets/base.view_partner_tree.x_eori.xml](https://github.com/Mint-System/Odoo-Build/tree/16.0/snippets/base.view_partner_tree.x_eori.xml)
@@ -943,6 +1038,30 @@ ID: `mint_system.base.view_partner_tree.x_global_location_number`
 ```
 Source: [snippets/base.view_partner_tree.x_global_location_number.xml](https://github.com/Mint-System/Odoo-Build/tree/16.0/snippets/base.view_partner_tree.x_global_location_number.xml)
 
+### X Schema  
+ID: `mint_system.base.view_partner_tree.x_schema`  
+```xml
+<?xml version="1.0"?>
+<data inherit_id="base.view_partner_tree" priority="50">
+    <field name="display_name" position="after">
+        <field name="x_schema" optional="show" widget="badge"/>
+    </field>
+</data>
+```
+Source: [snippets/base.view_partner_tree.x_schema.xml](https://github.com/Mint-System/Odoo-Build/tree/16.0/snippets/base.view_partner_tree.x_schema.xml)
+
+### X Vat  
+ID: `mint_system.base.view_partner_tree.x_vat`  
+```xml
+<?xml version="1.0"?>
+<data inherit_id="base.view_partner_tree" priority="50">
+    <field name="display_name" position="after">
+        <field name="x_vat"/>
+    </field>
+</data>
+```
+Source: [snippets/base.view_partner_tree.x_vat.xml](https://github.com/Mint-System/Odoo-Build/tree/16.0/snippets/base.view_partner_tree.x_vat.xml)
+
 ### X Vst  
 ID: `mint_system.base.view_partner_tree.x_vst`  
 ```xml
@@ -955,6 +1074,18 @@ ID: `mint_system.base.view_partner_tree.x_vst`
 
 ```
 Source: [snippets/base.view_partner_tree.x_vst.xml](https://github.com/Mint-System/Odoo-Build/tree/16.0/snippets/base.view_partner_tree.x_vst.xml)
+
+### X Zaz  
+ID: `mint_system.base.view_partner_tree.x_zaz`  
+```xml
+<?xml version="1.0"?>
+<data inherit_id="base.view_partner_tree" priority="50">
+    <field name="display_name" position="after">
+        <field name="x_zaz"/>
+    </field>
+</data>
+```
+Source: [snippets/base.view_partner_tree.x_zaz.xml](https://github.com/Mint-System/Odoo-Build/tree/16.0/snippets/base.view_partner_tree.x_zaz.xml)
 
 ## View Res Bank Tree  
 ### Add Zip  
