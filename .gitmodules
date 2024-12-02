@@ -10,3 +10,11 @@
 	path = themes
 	url = git@github.com:odoo/design-themes.git
 	branch = 18.0
+[submodule "oca/sale-workflow"]
+	path = oca/sale-workflow
+	url = git@github.com:OCA/sale-workflow.git
+	branch = 18.0
+[submodule "addons/server_tools"]
+	path = addons/server_tools
+	url = git@github.com:Mint-System/Odoo-Apps-Server-Tools.git
+	branch = 18.0
