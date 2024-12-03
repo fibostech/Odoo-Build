@@ -353,10 +353,14 @@ function docker-login() {
 }
 
 function publish() {
+    LATEST_TAG="odoo:$GIT_BRANCH"
+    echo "Tag Docker image ${DOCKER_REGISTRY}${DOCKER_TAG} with ${DOCKER_REGISTRY}${LATEST_TAG}"
+    docker tag "${DOCKER_REGISTRY}${DOCKER_TAG}" "${DOCKER_REGISTRY}${LATEST_TAG}"
+
     echo "Push Docker image ${DOCKER_REGISTRY}${DOCKER_TAG}"
     docker --config "$HOME/.docker/$DOCKER_REGISTRY" push "${DOCKER_REGISTRY}${DOCKER_TAG}"
+    docker --config "$HOME/.docker/$DOCKER_REGISTRY" push "${DOCKER_REGISTRY}${LATEST_TAG}"
 }
-
 
 function install-odoo-scripts() {
     curl -L https://raw.githubusercontent.com/mint-system/ansible-build/master/roles/odoo_scripts/files/install | bash
@@ -975,7 +979,7 @@ function setup-mail() {
     activate-venv
     set-addons-path
     echo "Setup mail server for database $DATABASE:"
-    echo "env['ir.mail_server'].create({'name':'Mailhog','smtp_host':'localhost','smtp_port':1025});env.cr.commit()" | 
+    echo "env['ir.mail_server'].create({'name':'Mailpit','smtp_host':'localhost','smtp_port':1025});env.cr.commit()" | 
     odoo shell -d "$DATABASE" --config "$ODOO_RC" --addons-path="$ADDONS_PATH" --no-http
 }
 
