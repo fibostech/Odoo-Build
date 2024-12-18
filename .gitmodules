@@ -18,3 +18,11 @@
 	path = addons/server_tools
 	url = git@github.com:Mint-System/Odoo-Apps-Server-Tools.git
 	branch = 18.0
+[submodule "addons/hr"]
+	path = addons/hr
+	url = git@github.com:mint-system/odoo-apps-hr.git
+	branch = 18.0
+[submodule "addons/manufacture"]
+	path = addons/manufacture
+	url = git@github.com:mint-system/odoo-apps-manufacture.git
+	branch = 18.0
