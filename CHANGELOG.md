@@ -9,6 +9,10 @@ All notable changes to this project will be documented in this file. The format 
 * Run the Odoo upgrade script with `upgrade-odoo`.
 * Upgrade module code with `upgrade-module`.
 
+### Fixed
+
+* Append nested module paths to the addons path env var.
+
 ## 2024-12-16
 
 ### Added
