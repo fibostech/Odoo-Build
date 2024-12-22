@@ -8,6 +8,7 @@ All notable changes to this project will be documented in this file. The format 
 
 * Run the Odoo upgrade script with `upgrade-odoo`.
 * Upgrade module code with `upgrade-module`.
+* After switching version branch with `checkout` the new branch is pulled
 
 ### Fixed
 
