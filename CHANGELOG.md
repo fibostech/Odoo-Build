@@ -8,11 +8,34 @@ All notable changes to this project will be documented in this file. The format 
 
 * Run the Odoo upgrade script with `upgrade-odoo`.
 * Upgrade module code with `upgrade-module`.
-* After switching version branch with `checkout` the new branch is pulled
+* After switching version branch with `checkout` the new branch is pulled.
+* Image shows revision date in settings page.
+* Image supports env vars to initialize database.
+* `test-docker` uses new env vars to initialize database.
+* Test image features with `test-docker`.
+* Extended usage section of the Image README file.
+* Use prefixed `PG` env vars for database connection.
+* Image supports auto update modules with click-odoo.
+* New commands to manage snippets `disable-snippet` and `remove-snippet`.
+* Support `MODULE_AUTO_INSTALL_DISABLED` for native path.
+
+### Updated
+
+* Command `test-xmlrpc` renamed to `test-xmlrpc`.
+* Refactored `odooctl` cli.
+* Added emojies to the README feature list.
+* Rename `build` folder to `image`.
 
 ### Fixed
 
 * Append nested module paths to the addons path env var.
+
+### Removed
+
+* Removed `logo.png`.
+* Removed `scripts/jsonrpc`.
+* Removed commands `get-jsonrpc-session`, `odoo-checkin` and `odoo-checkout`.
+* Removed `odoorpc` from requirements.txt.
 
 ## 2024-12-16
 
