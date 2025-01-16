@@ -549,7 +549,7 @@ function list-modules() {
 
 function build() {
     DOCKERFILE="image/Dockerfile"
-    PLATFORM="arm64"
+    PLATFORM="amd64"
     # PLATFORM="linux/amd64,linux/arm64"
     if [ -n "$1" ]; then
         PLATFORM="$1"
