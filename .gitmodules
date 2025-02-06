@@ -46,3 +46,15 @@
 	path = addons/connector
 	url = git@github.com:Mint-System/Odoo-Apps-Connector.git
 	branch = 18.0
+[submodule "oca/project"]
+	path = oca/project
+	url = git@github.com:OCA/project.git
+	branch = 18.0
+[submodule "oca/bank-statement-import"]
+	path = oca/bank-statement-import
+	url = git@github.com:OCA/bank-statement-import.git
+	branch = 18.0
+[submodule "oca/partner-contact"]
+	path = oca/partner-contact
+	url = git@github.com:OCA/partner-contact.git
+	branch = 18.0
