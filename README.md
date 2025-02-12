@@ -1,7 +1,8 @@
 Odoo Build
 ==========
 
-[![Docker pulls](https://img.shields.io/docker/pulls/mintsystem/odoo)](https://hub.docker.com/r/mintsystem/odoo/) [![.github/workflows/test.yml](https://github.com/Mint-System/Odoo-Build/actions/workflows/test.yml/badge.svg)](https://github.com/Mint-System/Odoo-Build/actions/workflows/test.yml)
+[![Docker pulls](https://img.shields.io/docker/pulls/mintsystem/odoo)](https://hub.docker.com/r/mintsystem/odoo/) [![.github/workflows/test.yml](https://github.com/Mint-System/Odoo-Build/actions/workflows/test.yml/badge.svg)](https://github.com/Mint-System/Odoo-Build/actions/workflows/test.yml) [![matrix-badge](https://matrix.to/img/matrix-badge.svg)](https://matrix.to/#/#odoo-build:mint-system.ch)
+
 
 This is the [Mint System](https://www.mint-system.ch/) Odoo development environment.
 
@@ -20,7 +21,7 @@ This projects provides a highly opinionated way to manage and develop Odoo. It f
 * ☸️ **Kubernetes**: Deploy Odoo and Postgres to a local Kubernetes cluster.  
 * 🔑 **Credentials**: Manage login credentials for Odoo and Nextcloud.  
 * ⬆️ **Odoo Upgrade**: Helper commands to ease the Odoo upgrade process.  
-* 🧠 **LLM**: Prompt LLMs with module code and apply changes as git patch.
+* 🧠 **LLM**: Prompt LLMs with module code and apply changes.
 * 🚀 **And More**: See [task help](./task.md).
 
 ## Requirements
@@ -32,11 +33,11 @@ The Odoo development environment has the following requirements:
 
 **Command Completion (Optional)**
 
-bash/zsh alias `alias task='./task'` with optional [bash](https://github.com/janikvonrotz/dotfiles/blob/master/bash/completions/task_completions)/[zsh](https://github.com/janikvonrotz/dotfiles/blob/master/oh-my-zsh/completions/_task) completion.
+bash/zsh alias `task='./task'` with [completion](https://taskfile.build/#completion).
 
 **Nix (Optional)**
 
-You can also use [Nix](https://nixos.org/) to setup the development requirements.
+You can use [Nix](https://nixos.org/) to setup the requirements.
 
 **Kubernetes (Optional)**
 

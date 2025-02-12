@@ -1,0 +1,21 @@
+<data inherit_id="sale.report_saleorder_document" priority="50">
+
+    <xpath expr="//td[@name='td_name']/../.." position="after">
+        <tr style="border-top: solid white !important">
+            <td/>
+            <td colspan="3">
+                <span t-field="line.name"/>
+                <br/>
+                <span>HS-Code</span>
+            </td>
+            <td/>
+        </tr>
+    </xpath>
+
+    <xpath expr="//td[@name='td_name']" position="replace">
+        <td name="td_name">
+            <span t-field="line.product_template_id"/>
+        </td>
+    </xpath>
+
+</data>
