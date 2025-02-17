@@ -121,6 +121,7 @@ function help-table() {
     printf "| %-${cmd_width}s | %-${opt_width}s | %-${desc_width}s |\n" "start-psql" "[db]" "Start PSQL shell in container container. Default is branch name."
     printf "| %-${cmd_width}s | %-${opt_width}s | %-${desc_width}s |\n" "start-shell" "[db]" "Start Odoo shell from source folder. Default is branch name."
     printf "| %-${cmd_width}s | %-${opt_width}s | %-${desc_width}s |\n" "stop" "[name]" "Stop containers."
+    printf "| %-${cmd_width}s | %-${opt_width}s | %-${desc_width}s |\n" "template-module-repo" "" "Template the module repo folder."
     printf "| %-${cmd_width}s | %-${opt_width}s | %-${desc_width}s |\n" "template-odoo-rc" "" "Template the Odoo config file."
     printf "| %-${cmd_width}s | %-${opt_width}s | %-${desc_width}s |\n" "template-docker-compose" "" "Template the Docker compose file."
     printf "| %-${cmd_width}s | %-${opt_width}s | %-${desc_width}s |\n" "test-container" "[clean]" "Test Odoo image."
@@ -1681,8 +1682,24 @@ function create-module-repo() {
         rm -rf "$REPO_PATH/*"
     fi
 
-    echo "Copy template files from templates/GIT_BRANCH to $REPO_PATH"
-    cp templates/GIT_BRANCH/* "$REPO_PATH"
+    template-module-repo "$REPO_PATH"
+}
+
+function template-module-repo() {
+    if test -z "$1"; then echo "\$1 is empty."; exit; fi
+
+    REPO_PATH="$1"
+    REPO_NAME=$(basename "$REPO_PATH")
+    REPO_TITLE=$(echo "$REPO_NAME" | sed -E 's/-/ /g'  | sed -E 's/_/ /g' | sed -E 's/\b(.)/\U\1/g')
+
+    echo "Copy template files from templates/$GIT_BRANCH/ to $REPO_PATH/"
+    cp -r templates/$GIT_BRANCH/. "$REPO_PATH/"
+
+    echo "Substitute $REPO_PATH/README.md"
+    export REPO_TITLE REPO_NAME
+    envsubst '$REPO_TITLE $REPO_NAME' < templates/README.md > "$REPO_PATH/README.md"
+
+    update-readme "$REPO_PATH/README.md"
 }
 
 function generate-module-security() {
