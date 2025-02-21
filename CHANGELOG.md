@@ -4,6 +4,12 @@ All notable changes to this project will be documented in this file. The format 
 
 ## Undefined
 
+### Updated
+
+* Change base image to `python:3.12-slim-bookworm`
+
+## 2025-02-20
+
 ### Fixed
 
 * Escape double quotes for database name in create statement.
@@ -21,13 +27,14 @@ All notable changes to this project will be documented in this file. The format 
 * Renamed `scripts` to `bin`.
 * Refactored the initialisation of the Odoo image.
 * Removed xml header from snippet files.
+* Switched from Python 3.11 to 3.12.
 
 ### Removed
 
 * Remove Odoo patch scripts.
-* Removed `node-less` and `npm` packages from image
+* Removed `node-less` and `npm` packages from image.
 
-## 2024-01-27
+## 2025-01-27
 
 ### Added
 

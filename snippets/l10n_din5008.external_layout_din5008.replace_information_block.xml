@@ -5,11 +5,16 @@
                 heigt: 30px;
             }
             .din_page.invoice_note tr .address, .din_page.invoice_note tr .shipping_address {
-                width: 76mm;
+                width: 85mm;
             }
             div.information_block {
                 line-height: 1.5;
             }
+            
+            .din_page.invoice_note tr .information_block {
+                margin-left: 10mm;
+            }
+            
         </style>
 
         <td style="vertical-align: top;">
@@ -107,7 +112,7 @@
                             <td>
                                 <span>Order Date</span>
                             </td>
-                            <td>                               
+                            <td>
                                 <span t-field="o.date_order" t-options="{'widget': 'date'}"/>
                             </td>
                         </tr>
@@ -123,6 +128,14 @@
                         </tr>
                         <tr>
                             <td>
+                                <span>Delivery Date</span>
+                            </td>
+                            <td>
+                                <span t-field="o.commitment_date" t-options="{'widget': 'date'}"/>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
                                 <span>Incoterms</span>
                             </td>
                             <td>
@@ -130,8 +143,7 @@
                             </td>
                         </tr>
                     </t>
-                  
-
+                    
                 </table>
             </div>
         </td>
